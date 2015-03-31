@@ -1,0 +1,56 @@
+
+
+modified hccontrol with hcscanner
+
+Waitman Gobble <ns@waitman.net>
+
+
+hcscanner connects to up to 3 bluetooth devices and scans for up to 1000 new BD Addresses in range 
+
+
+# make
+
+# make clean
+
+
+
+# ./hcscanner
+        ubt0hci BD_ADDR: 00:1b:dc:06:5c:b5
+        ubt0hci BD_ADDR: cc:6d:a0:ba:73:e8
+        ubt0hci BD_ADDR: 78:e8:b6:76:6f:1e
+        ubt1hci BD_ADDR: 00:1b:dc:06:ae:4c
+        ubt2hci BD_ADDR: 00:1b:dc:06:94:d3
+        ubt0hci BD_ADDR: 00:1a:7d:da:71:13
+        ubt0hci BD_ADDR: c8:84:47:22:38:20
+
+-r switch turns on RSSI scanning.
+
+# ./hcscanner -r
+
+        ubt0hci BD_ADDR: cc:6d:a0:ba:73:e8
+        ubt0hci BD_ADDR: 00:1a:7d:da:71:13
+        ubt0hci BD_ADDR: 00:1b:dc:06:5c:b5
+        00:1a:7d:da:71:13           62  ubt0hci -13 dB
+        00:1a:7d:da:71:13           58  ubt1hci -19 dB
+        00:1a:7d:da:71:13           62  ubt0hci -14 dB
+        00:1a:7d:da:71:13           58  ubt1hci -22 dB
+        00:1b:dc:06:5c:b5           55  ubt0hci -3 dB
+        00:1a:7d:da:71:13           62  ubt0hci -12 dB
+        00:1a:7d:da:71:13           58  ubt1hci -19 dB
+        ubt0hci BD_ADDR: 78:e8:b6:76:6f:1e
+        00:1a:7d:da:71:13           58  ubt1hci -21 dB
+        00:1b:dc:06:5c:b5           55  ubt0hci 0 dB
+        00:1a:7d:da:71:13           62  ubt0hci -13 dB
+        00:1a:7d:da:71:13           58  ubt1hci -19 dB
+        00:1a:7d:da:71:13           58  ubt1hci -20 dB
+        00:1b:dc:06:5c:b5           55  ubt0hci -1 dB
+        00:1a:7d:da:71:13           62  ubt0hci -14 dB
+        00:1b:dc:06:5c:b5           55  ubt0hci 0 dB
+        00:1a:7d:da:71:13           62  ubt0hci -17 dB
+        00:1a:7d:da:71:13           58  ubt1hci -18 dB
+        ubt1hci BD_ADDR: 00:1b:dc:06:94:d3
+        00:1b:dc:06:5c:b5           55  ubt0hci -4 dB
+        00:1a:7d:da:71:13           62  ubt0hci -18 dB
+
+
+
